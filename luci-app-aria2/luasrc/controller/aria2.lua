@@ -1,4 +1,4 @@
--- Copyright 2016-2018 Hsing-wang Liao <kuoruan@gmail.com>
+-- Copyright 2016-2019 Xingwang Liao <kuoruan@gmail.com>
 -- Licensed to the public under the MIT License.
 
 local fs   = require "nixio.fs"
@@ -20,14 +20,14 @@ function index()
 	entry({"admin", "services", "aria2", "config"},
 		cbi("aria2/config"), _("Configuration"), 1)
 
-	entry({"admin", "services", "aria2", "status"},
-		call("action_status"))
-
 	entry({"admin", "services", "aria2", "file"},
 		cbi("aria2/files"), _("Files"), 2)
 
 	entry({"admin", "services", "aria2", "log"},
 		firstchild(), _("Log"), 3)
+
+	entry({"admin", "services", "aria2", "status"},
+		call("action_status"))
 
 	entry({"admin", "services", "aria2", "log", "view"},
 		template("aria2/log_view"))
@@ -47,7 +47,7 @@ function action_status()
 end
 
 function action_log_read()
-	local data = { log = "" }
+	local data = { log = "", syslog = "" }
 
 	local log_file = uci:get("aria2", "main", "log") or "/var/log/aria2.log"
 	if fs.access(log_file) then

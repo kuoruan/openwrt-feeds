@@ -1,4 +1,4 @@
--- Copyright 2017-2018 Hsing-wang Liao <kuoruan@gmail.com>
+-- Copyright 2017-2019 Xingwang Liao <kuoruan@gmail.com>
 -- Licensed to the public under the MIT License.
 
 local sys  = require "luci.sys"

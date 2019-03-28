@@ -1,5 +1,5 @@
 <%#
- Copyright 2017-2018 Hsing-wang Liao <kuoruan@gmail.com>
+ Copyright 2017-2019 Xingwang Liao <kuoruan@gmail.com>
  Licensed to the public under the MIT License.
 -%>
 
@@ -32,8 +32,8 @@
 	<p>
 		<%:Installed web interface: %>
 		<%- for _, v in pairs(uilist.installed) do %>
-		<input type="button" class="cbi-button" style="margin: 0 5px;" value="<%=uilist.supported[v]%>"
-			onclick="openWebInterface('<%=v%>');" />
+		<input type="button" class="cbi-button" style="margin: 0 5px;"
+			value="<%=uilist.supported[v]%>" onclick="openWebInterface('<%=v%>');" />
 		<%- end %>
 	<p>
 	<% end %>
@@ -44,18 +44,14 @@ XHR.poll(5, '<%=url("admin/services/aria2/status")%>', null,
 	function(x, data) {
 		var tb = document.getElementById('aria2_status');
 		if (data && tb) {
-			if (data.running) {
-				tb.innerHTML = '<%:The Aria2 service is running.%>';
-			} else {
-				tb.innerHTML = '<%:The Aria2 service is not running.%>';
-			}
+			tb.innerHTML = data.running
+				? '<%:The Aria2 service is running.%>'
+				: '<%:The Aria2 service is not running.%>';
 		}
 	}
 );
 
 function randomString(len) {
-	if (isNaN(len)) len = 32;
-
 	var randomStr = '';
 	var restLen = len;
 	while ((restLen = len - randomStr.length) > 0) {
@@ -65,32 +61,52 @@ function randomString(len) {
 }
 
 function randomToken() {
-	var len = prompt('<%:Please input token length:%>', 20);
-	if (len != null && len != "") {
-		document.getElementById('cbid.aria2.main.rpc_secret').value = randomString(len);
+	var len = 32;
+	if (typeof window.prompt === 'function') {
+		var inputLength = prompt('<%:Please input token length:%>', 20);
+		if (!isNaN(inputLength)) {
+			len = parseInt(inputLength);
+		}
+	}
+
+	var secretInput = document.getElementById('cbid.aria2.main.rpc_secret');
+	if (secretInput) {
+		secretInput.value = randomString(len);
 	}
 };
 
 function showRPCURL() {
-	var port = document.getElementById('cbid.aria2.main.rpc_listen_port').value || '6800';
-	var auth_method = document.getElementById('cbid.aria2.main.rpc_auth_method').value;
-	var use_ws = document.getElementById('cbid.aria2.main._use_ws').checked;
-	var secure_elm = document.getElementById('cbid.aria2.main.rpc_secure');
-	var secure = secure_elm ? secure_elm.checked : false;
+	var portElm = document.getElementById('cbid.aria2.main.rpc_listen_port');
+	var authMethodElm = document.getElementById('cbid.aria2.main.rpc_auth_method');
+	var useWSElm = document.getElementById('cbid.aria2.main._use_ws');
+	var secureElm = document.getElementById('cbid.aria2.main.rpc_secure');
 
-	var protocol = use_ws ? (secure ? 'wss' : 'ws') : (secure ? 'https' : 'http');
+	var port = (portElm && !isNaN(portElm.value)) ? parseInt(portElm.value) : 6800;
+	var authMethod = (authMethodElm && authMethod.value) ? authMethod.value : "none";
+	var useWS = (useWSElm && useWSElm.checked) ? true : false;
+	var secure = (secureElm && secureElm.checked) ? true : false;
+
+	var protocol = useWS
+		? (secure ? 'wss' : 'ws')
+		: (secure ? 'https' : 'http');
 	var url = protocol + "://";
 
-	if (auth_method == 'token') {
-		var auth_token = document.getElementById('cbid.aria2.main.rpc_secret').value;
-		url += 'token:' + auth_token + '@';
-	} else if (auth_method == 'user_pass') {
-		var auth_user = document.getElementById('cbid.aria2.main.rpc_user').value;
-		var auth_passwd = document.getElementById('cbid.aria2.main.rpc_passwd').value;
-		url += auth_user + ':' + auth_passwd + '@';
+	if (authMethod == 'token') {
+		var authToken = document.getElementById('cbid.aria2.main.rpc_secret').value;
+		url += 'token:' + authToken + '@';
+	} else if (authMethod == 'user_pass') {
+		var authUser = document.getElementById('cbid.aria2.main.rpc_user').value;
+		var authPasswd = document.getElementById('cbid.aria2.main.rpc_passwd').value;
+		url += authUser + ':' + authPasswd + '@';
 	}
 	url += window.location.hostname + ':' + port + '/jsonrpc';
-	document.getElementById('cbid.aria2.main._rpc_url').value = url;
+	var rpcUrlElm = document.getElementById('cbid.aria2.main._rpc_url');
+
+	if (rpcUrlElm) {
+		rpcUrlElm.value = url;
+	} else {
+		alert(url)
+	}
 };
 
 function openWebInterface(path) {

@@ -1,5 +1,5 @@
 <%#
- Copyright 2017-2018 Hsing-wang Liao <kuoruan@gmail.com>
+ Copyright 2017-2019 Xingwang Liao <kuoruan@gmail.com>
  Licensed to the public under the MIT License.
 -%>
 
@@ -26,17 +26,17 @@
 <script type="text/javascript">//<![CDATA[
 	XHR.poll(10, '<%=url("admin/services/aria2/log/read")%>', null,
 		function(x, data) {
-			var log_elm = document.getElementById('log_text');
-			if (log_elm && data) {
-				log_elm.innerHTML = String.format(
-					'<pre>%s%s%s%s</pre>',
-					'<span class="description"><%:Last 50 lines of log file:%></span><br/><br/>',
-					data.log || '<%:No log data.%>',
-					'<br/><br/><span class="description"><%:Last 50 lines of syslog:%></span><br/><br/>',
-					data.syslog || '<%:No log data.%>'
-				);
-			} else {
-				log_elm.innerHTML = '<strong><%:Error get log data.%></strong>';
+			var logElm = document.getElementById('log_text');
+			if (logElm) {
+				logElm.innerHTML = data
+					? '<strong><%:Failed to load log data.%></strong>'
+					: String.format(
+							'<pre>%s%s%s%s</pre>',
+							'<span class="description"><%:Last 50 lines of log file:%></span><br/><br/>',
+							data.log || '<%:No log data.%>',
+							'<br/><br/><span class="description"><%:Last 50 lines of syslog:%></span><br/><br/>',
+							data.syslog || '<%:No log data.%>'
+						);
 			}
 		}
 	);
@@ -44,7 +44,10 @@
 <div class="cbi-map">
 	<h2 name="content"><%:Aria2%> - <%:Log Data%></h2>
 	<fieldset class="cbi-section">
-		<div id="log_text"><img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" /><%:Collecting data...%></div>
+		<div id="log_text">
+			<img src="<%=resource%>/icons/loading.gif" alt="<%:Loading%>" style="vertical-align:middle" />
+			<%:Collecting data...%>
+		</div>
 		<div style="text-align:right"><small><%:Refresh every 10 seconds.%></small></div>
 	</fieldset>
 </div>
