@@ -1,22 +1,20 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: LuCI: aria2\n"
-"POT-Creation-Date: 2017-11-30 23:45+0300\n"
-"PO-Revision-Date: 2018-01-31 18:33+0300\n"
-"Language-Team: http://cyber-place.ru\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
-"Last-Translator: Vladimir aka sunny <picfun@ya.ru>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Language: ru\n"
-"Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
-"интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 
 msgid "<abbr title=\"Local Peer Discovery\">LPD</abbr> enabled"
-msgstr "<abbr title=\"Обнаружение локальных пиров\">LPD</abbr> включено"
+msgstr ""
+"<abbr title=\"Descubrimiento de compañeros locales\">LPD</abbr> habilitado"
 
 msgid "Additional BT tracker"
 msgstr ""
@@ -48,7 +46,7 @@ msgid "BitTorrent Options"
 msgstr ""
 
 msgid "BitTorrent listen port"
-msgstr "Порты BitTorrent-а"
+msgstr "BitTorrent escucha puerto"
 
 msgid "CA certificate"
 msgstr ""
@@ -65,10 +63,10 @@ msgid ""
 msgstr ""
 
 msgid "Collecting data..."
-msgstr "Сбор данных..."
+msgstr "Recolectando datos..."
 
 msgid "Config file directory"
-msgstr "Папка расположения<br />сonfig файла"
+msgstr "Directorio de archivos de configuración"
 
 msgid "Configuration"
 msgstr ""
@@ -86,7 +84,7 @@ msgid "DHT Listen port"
 msgstr ""
 
 msgid "Debug"
-msgstr "Отладка"
+msgstr "Depurar"
 
 msgid ""
 "Disable IPv6. This is useful if you have to use broken DNS and want to avoid "
@@ -94,7 +92,7 @@ msgid ""
 msgstr ""
 
 msgid "Disk cache"
-msgstr "Дисковый кэш"
+msgstr "Caché de disco"
 
 msgid "Don't split less than 2*SIZE byte range. Possible values: 1M-1024M."
 msgstr ""
@@ -133,16 +131,16 @@ msgid "Enable proxy"
 msgstr ""
 
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Habilitado"
 
 msgid "Error"
-msgstr "Ошибка"
+msgstr "Error"
 
 msgid "Error: Can't find aria2c in PATH, please reinstall aria2."
 msgstr ""
 
 msgid "Extra Settings"
-msgstr "Дополнительные настройки"
+msgstr "Ajustes extra"
 
 msgid "Failed to load log data."
 msgstr ""
@@ -160,7 +158,7 @@ msgid "Files"
 msgstr ""
 
 msgid "Follow torrent"
-msgstr "Запустить<br />торрент-файл"
+msgstr "Seguir torrent"
 
 msgid "For more information, please visit: %s"
 msgstr ""
@@ -169,7 +167,7 @@ msgid "Force save"
 msgstr ""
 
 msgid "Generate Randomly"
-msgstr "Генерировать случайно"
+msgstr "Generar aleatoriamente"
 
 msgid "HTTP accept gzip"
 msgstr ""
@@ -203,7 +201,7 @@ msgid ""
 msgstr ""
 
 msgid "Info"
-msgstr "Информация"
+msgstr "Información"
 
 msgid "Installed web interface:"
 msgstr ""
@@ -241,22 +239,22 @@ msgid "Log file"
 msgstr ""
 
 msgid "Log level"
-msgstr "Записывать в журнал"
+msgstr "Nivel de registro"
 
 msgid "Lowest speed limit"
 msgstr ""
 
 msgid "Max concurrent downloads"
-msgstr "Максимальное количество одновременных загрузок"
+msgstr "Máximo de descargas concurrentes"
 
 msgid "Max connection per server"
-msgstr "Максимальное количество<br />подключений на сервер"
+msgstr "Máxima conexiones por servidor"
 
 msgid "Max download limit"
 msgstr ""
 
 msgid "Max number of split"
-msgstr "Максимальное<br />число разделений"
+msgstr "Número máximo de división"
 
 msgid "Max open files"
 msgstr ""
@@ -277,10 +275,10 @@ msgid "Max upload limit"
 msgstr ""
 
 msgid "Min split size"
-msgstr "Минимальный размер разделений"
+msgstr "Tamaño mínimo de división"
 
 msgid "No Authentication"
-msgstr "Без проверки подлинности"
+msgstr "Sin autenticacion"
 
 msgid "No log data."
 msgstr ""
@@ -289,7 +287,7 @@ msgid "None"
 msgstr ""
 
 msgid "Notice"
-msgstr "Заметка"
+msgstr "Aviso"
 
 msgid "Pause"
 msgstr ""
@@ -307,7 +305,7 @@ msgid "Please input token length:"
 msgstr ""
 
 msgid "Prefix of peer ID"
-msgstr "Префикс ID пира"
+msgstr "Prefijo de ID de par"
 
 msgid "Private key"
 msgstr ""
@@ -322,16 +320,16 @@ msgid "RPC Options"
 msgstr ""
 
 msgid "RPC authentication method"
-msgstr "Метод аутентификации для доступа к удаленному управлению (RPC)"
+msgstr "Método de autenticación RPC"
 
 msgid "RPC certificate"
 msgstr ""
 
 msgid "RPC password"
-msgstr "Пароль для доступа к удаленному управлению (RPC)"
+msgstr "Contraseña RPC"
 
 msgid "RPC port"
-msgstr "Порт для доступа к удаленному управлению (RPC)"
+msgstr "Puerto RPC"
 
 msgid "RPC private key"
 msgstr ""
@@ -348,7 +346,7 @@ msgid ""
 msgstr ""
 
 msgid "RPC username"
-msgstr "Логин для доступа к удаленному управлению (RPC)"
+msgstr "Nombre de usuario RPC"
 
 msgid "Refresh every 10 seconds."
 msgstr ""
@@ -516,10 +514,10 @@ msgid "Stop timeout"
 msgstr ""
 
 msgid "The Aria2 service is not running."
-msgstr "Aria2 сервис не запущен."
+msgstr "El servicio Aria2 no se está ejecutando."
 
 msgid "The Aria2 service is running."
-msgstr "Aria2 сервис запущен."
+msgstr "El servicio Aria2 se está ejecutando."
 
 msgid "The directory to store the config file, session file and DHT file."
 msgstr ""
@@ -540,13 +538,13 @@ msgid "Timeout"
 msgstr ""
 
 msgid "Token"
-msgstr "Токен"
+msgstr "Token"
 
 msgid "True"
 msgstr ""
 
 msgid "Use WebSocket"
-msgstr "Использовать WebSockets"
+msgstr "Utilizar websocket"
 
 msgid "Use a proxy server for all protocols."
 msgstr ""
@@ -586,14 +584,14 @@ msgid "User agent"
 msgstr ""
 
 msgid "Username & Password"
-msgstr "Имя и пароль"
+msgstr "Nombre de usuario y contraseña"
 
 msgid ""
 "Verify the peer using certificates specified in \"CA certificate\" option."
 msgstr ""
 
 msgid "Warn"
-msgstr "Внимание"
+msgstr "Advertir"
 
 msgid "You can append K or M."
 msgstr ""
@@ -608,118 +606,119 @@ msgid "trunc"
 msgstr ""
 
 #~ msgid "\"Falloc\" is not available in all cases."
-#~ msgstr "'Falloc' возможен не всегда."
+#~ msgstr "\"Falloc\" no está disponible en todos los casos."
 
 #~ msgid "<abbr title=\"Distributed Hash Table\">DHT</abbr> enabled"
-#~ msgstr "<abbr title=\"Распределенная Hash таблица\">DHT</abbr> включена"
+#~ msgstr "<abbr title=\"Tabla de hash distribuida\">DHT</abbr> habilitado"
 
 #~ msgid "Additional Bt tracker enabled"
-#~ msgstr "Дополнительный<br />Bt tracker включен"
+#~ msgstr "Bt tracker adicional habilitado"
 
 #~ msgid "Aria2 Settings"
-#~ msgstr "Настройка Aria2"
+#~ msgstr "Ajustes de Aria2"
 
 #~ msgid "Aria2 Status"
-#~ msgstr "Состояние Aria2"
+#~ msgstr "Estado de Aria2"
 
 #~ msgid ""
 #~ "Aria2 is a multi-protocol &amp; multi-source download utility, here you "
 #~ "can configure the settings."
 #~ msgstr ""
-#~ "Aria2 - это мульти-протокольная и мульти-платформенная утилита загрузки, "
-#~ "здесь вы сможете ее настроить."
+#~ "Aria2 es un multiprotocolo &amp; Utilidad de descarga multi-fuente, aquí "
+#~ "puede configurar los ajustes."
 
 #~ msgid "Autosave session interval"
-#~ msgstr "Интервал сессии автосохранения"
+#~ msgstr "Intervalo de sesión de autoguardado"
 
 #~ msgid "BitTorrent Settings"
-#~ msgstr "Настройки BitTorrent-а"
+#~ msgstr "Ajustes de BitTorrent"
 
 #~ msgid "Default download directory"
-#~ msgstr "Папка для загрузки<br />файлов по умолчанию"
+#~ msgstr "Directorio de descarga predeterminado"
 
 #~ msgid "Enable log"
-#~ msgstr "Включить ведение системного журнала"
+#~ msgstr "Habilitar registro"
 
 #~ msgid "Falloc"
 #~ msgstr "Falloc"
 
 #~ msgid "Files and Locations"
-#~ msgstr "Файлы и папки"
+#~ msgstr "Archivos y ubicaciones"
 
 #~ msgid "General Settings"
-#~ msgstr "Основные настройки"
+#~ msgstr "Ajustes generales"
 
 #~ msgid "List of additional Bt tracker"
-#~ msgstr "Список дополнительных BT tracker-ов"
+#~ msgstr "Lista de Bt Tracker adicional"
 
 #~ msgid "List of extra settings"
-#~ msgstr "Список дополнительных настроек"
+#~ msgstr "Lista de ajustes extra"
 
 #~ msgid "Max number of peers per torrent"
-#~ msgstr "Максимальное число<br />пиров на торрент-файл"
+#~ msgstr "Número máximo de pares por torrent"
 
 #~ msgid "Off"
-#~ msgstr "Выключено"
+#~ msgstr "Apagado"
+
+#~ msgid "Open AriaNg"
+#~ msgstr "Abrir AriaNg"
 
 #~ msgid "Open WebUI-Aria2"
-#~ msgstr "Открыть WebUI-Aria2"
+#~ msgstr "Abrir WebUI-Aria2"
 
 #~ msgid "Open YAAW"
-#~ msgstr "Открыть YAAW"
+#~ msgstr "Abrir YAAW"
 
 #~ msgid "Overall download limit"
-#~ msgstr "Общее ограничение<br />скорости загрузки"
+#~ msgstr "Límite global de descargas"
 
 #~ msgid "Overall speed limit enabled"
-#~ msgstr "Общее ограничение скорости<br /> для утилиты включено"
+#~ msgstr "Límite de velocidad total habilitado"
 
 #~ msgid "Overall upload limit"
-#~ msgstr "Общее ограничение<br />скорости раздачи"
+#~ msgstr "Límite global de carga"
 
 #~ msgid "Per task download limit"
-#~ msgstr "Ограничить скорость загрузки"
+#~ msgstr "Límite de descarga por tarea"
 
 #~ msgid "Per task speed limit enabled"
-#~ msgstr "Ограничить скорость для одной задачи включено"
+#~ msgstr "Límite de velocidad por tarea habilitado"
 
 #~ msgid "Per task upload limit"
-#~ msgstr "Ограничить скорость раздачи"
+#~ msgstr "Límite de carga por tarea"
 
 #~ msgid "Prealloc"
-#~ msgstr "Предварительно"
+#~ msgstr "Preasignar"
 
 #~ msgid "Preallocation"
-#~ msgstr "Предварительное<br />распределение<br />места под файл"
+#~ msgstr "Preasignación"
 
 #~ msgid "RPC Token"
-#~ msgstr "Токен для доступа к удаленному управлению (RPC)"
+#~ msgstr "RPC Token"
 
 #~ msgid "Run daemon as user"
-#~ msgstr "Запуск демона<br />от имени пользователя"
+#~ msgstr "Ejecutar demonio como usuario"
 
 #~ msgid "Sec"
-#~ msgstr "Секунды"
+#~ msgstr "Seg"
 
 #~ msgid "Task Settings"
-#~ msgstr "Настройки задач"
+#~ msgstr "Ajustes de tareas"
+
+#~ msgid "The default log file is /var/log/aria2.log"
+#~ msgstr "El archivo de registro predeterminado es /var/log/aria2.log"
 
 #~ msgid "Trunc"
-#~ msgstr "Сокращать"
+#~ msgstr "Truncar"
 
 #~ msgid "User agent value"
-#~ msgstr "Агент пользователя"
+#~ msgstr "Valor de agente de usuario"
 
 #~ msgid "View Json-RPC URL"
-#~ msgstr "Показать URL Json-RPC"
+#~ msgstr "Ver la URL de Json-RPC"
 
 #~ msgid "in bytes, You can append K or M."
-#~ msgstr ""
-#~ "Дисковый кэш в байтах. Вы можете добавить суффикс K (кило) или М (мега)."
+#~ msgstr "en bytes, puedes añadir K o M."
 
 #~ msgid "in bytes/sec, You can append K or M."
-#~ msgstr ""
-#~ "в байтах/секундах. Вы можете добавить суффикс K (кило) или М (мега)."
-
-#~ msgid "Log file is in the config file dir."
-#~ msgstr "Файл системного журнала находится в папке с config файлом."
+#~ msgstr "en bytes/seg, puedes añadir K o M."

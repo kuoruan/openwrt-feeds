@@ -127,14 +127,14 @@ msgstr "启用"
 msgid "Error"
 msgstr "错误"
 
-msgid "Error get log data."
-msgstr "获取日志数据失败。"
-
 msgid "Error: Can't find aria2c in PATH, please reinstall aria2."
 msgstr "错误：未在 PATH 中找到 aria2c，请重新安装 Aria2。"
 
 msgid "Extra Settings"
 msgstr "附加选项"
+
+msgid "Failed to load log data."
+msgstr "获取日志数据失败。"
 
 msgid "False"
 msgstr "否"
@@ -279,7 +279,7 @@ msgid "No log data."
 msgstr "无日志数据。"
 
 msgid "None"
-msgstr ""
+msgstr "无"
 
 msgid "Notice"
 msgstr "注意"

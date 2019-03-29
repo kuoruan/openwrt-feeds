@@ -124,13 +124,13 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-msgid "Error get log data."
-msgstr ""
-
 msgid "Error: Can't find aria2c in PATH, please reinstall aria2."
 msgstr ""
 
 msgid "Extra Settings"
+msgstr ""
+
+msgid "Failed to load log data."
 msgstr ""
 
 msgid "False"

@@ -1,5 +1,16 @@
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: Luiz Angelo Daros de Luca <luizluca@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
 
 msgid "<abbr title=\"Local Peer Discovery\">LPD</abbr> enabled"
 msgstr ""
@@ -25,7 +36,6 @@ msgid ""
 "Aria2 is a lightweight multi-protocol &amp; multi-source, cross platform "
 "download utility."
 msgstr ""
-"Aria2 é um utilitário de transferência multi-protocolo de múltiplas fontes."
 
 msgid "Auto save interval"
 msgstr ""
@@ -60,7 +70,7 @@ msgid "Config file directory"
 msgstr "Diretório dos arquivos de configuração"
 
 msgid "Configuration"
-msgstr "Configurações"
+msgstr ""
 
 msgid "Connect timeout"
 msgstr ""
@@ -113,7 +123,7 @@ msgid "Enable disk cache (in bytes), set 0 to disabled."
 msgstr ""
 
 msgid "Enable logging"
-msgstr "Habilitar registros"
+msgstr ""
 
 msgid "Enable peer exchange"
 msgstr ""
@@ -127,14 +137,14 @@ msgstr "Habilitado"
 msgid "Error"
 msgstr "Erro"
 
-msgid "Error get log data."
-msgstr ""
-
 msgid "Error: Can't find aria2c in PATH, please reinstall aria2."
 msgstr ""
 
 msgid "Extra Settings"
 msgstr "Configurações Adicionais"
+
+msgid "Failed to load log data."
+msgstr ""
 
 msgid "False"
 msgstr ""
@@ -177,13 +187,9 @@ msgstr ""
 
 msgid "IPv4 <abbr title=\"Distributed Hash Table\">DHT</abbr> enabled"
 msgstr ""
-"IPv4 <abbr title=\"Distributed Hash Table/Tabla de disperção distribuída"
-"\">DHT</abbr> habilitado"
 
 msgid "IPv6 <abbr title=\"Distributed Hash Table\">DHT</abbr> enabled"
 msgstr ""
-"IPv6 <abbr title=\"Distributed Hash Table/Tabla de disperção distribuída"
-"\">DHT</abbr> habilitado"
 
 msgid "IPv6 disabled"
 msgstr ""
@@ -202,7 +208,7 @@ msgid "Installed web interface:"
 msgstr ""
 
 msgid "Json-RPC URL"
-msgstr "URL do JSON-RPC"
+msgstr ""
 
 msgid "Keep in memory"
 msgstr ""
@@ -340,8 +346,6 @@ msgstr ""
 
 msgid "RPC token"
 msgstr ""
-"Chave eletrônica do <abbr title=\"Remote Procedure Call/Chamada de "
-"Procedimento Remoto\">RPC</abbr>"
 
 msgid ""
 "RPC transport will be encrypted by SSL/TLS. The RPC clients must use https "
@@ -397,7 +401,7 @@ msgid ""
 msgstr ""
 
 msgid "Save session interval"
-msgstr "Intervalo para autossalvamento da sessão"
+msgstr ""
 
 msgid "Seed previously downloaded files without verifying piece hashes."
 msgstr ""
@@ -471,7 +475,7 @@ msgid "Settings list"
 msgstr ""
 
 msgid "Show URL"
-msgstr "Visualizar URL"
+msgstr ""
 
 msgid ""
 "Specify file allocation method. If you are using newer file systems such as "
@@ -586,7 +590,7 @@ msgid ""
 msgstr ""
 
 msgid "User agent"
-msgstr "Valor da identificação do agente do usuário"
+msgstr ""
 
 msgid "Username & Password"
 msgstr "Usuário & Senha"
@@ -599,7 +603,7 @@ msgid "Warn"
 msgstr "Atenção"
 
 msgid "You can append K or M."
-msgstr "Você pode sufixar com K (quilo) ou M (mega)."
+msgstr ""
 
 msgid "falloc"
 msgstr ""
@@ -609,3 +613,123 @@ msgstr ""
 
 msgid "trunc"
 msgstr ""
+
+#~ msgid "\"Falloc\" is not available in all cases."
+#~ msgstr "\"Falloc\" não está disponível em todas as classes."
+
+#~ msgid "<abbr title=\"Distributed Hash Table\">DHT</abbr> enabled"
+#~ msgstr ""
+#~ "<abbr title=\"Distributed Hash Table/Tabla de disperção distribuída"
+#~ "\">DHT</abbr> habilitado"
+
+#~ msgid "Additional Bt tracker enabled"
+#~ msgstr "Rastreadores BitTorrent adicionais habilitado"
+
+#~ msgid "Aria2 Settings"
+#~ msgstr "Configurações do Aria2"
+
+#~ msgid "Aria2 Status"
+#~ msgstr "Estado do Aria2"
+
+#~ msgid ""
+#~ "Aria2 is a multi-protocol &amp; multi-source download utility, here you "
+#~ "can configure the settings."
+#~ msgstr ""
+#~ "Aria2 é um utilitário de transferência multi-protocolo de múltiplas "
+#~ "fontes, aqui você pode configurá-lo."
+
+#~ msgid "Autosave session interval"
+#~ msgstr "Intervalo para autossalvamento da sessão"
+
+#~ msgid "BitTorrent Settings"
+#~ msgstr "Configurações do BitTorrent"
+
+#~ msgid "Default download directory"
+#~ msgstr "Diretório padrão de arquivos baixados"
+
+#~ msgid "Enable log"
+#~ msgstr "Habilitar registros"
+
+#~ msgid "Falloc"
+#~ msgstr "Falloc"
+
+#~ msgid "Files and Locations"
+#~ msgstr "Arquivos e Locais"
+
+#~ msgid "General Settings"
+#~ msgstr "Configurações Gerais"
+
+#~ msgid "List of additional Bt tracker"
+#~ msgstr "Lista de rastreadores BitTorrent adicionais"
+
+#~ msgid "List of extra settings"
+#~ msgstr "Lista de configurações adicionais"
+
+#~ msgid "Max number of peers per torrent"
+#~ msgstr "Numero máximo de parceiros por torrent"
+
+#~ msgid "Off"
+#~ msgstr "Desligado"
+
+#~ msgid "Open WebUI-Aria2"
+#~ msgstr "Abrir WebUI-Aria2"
+
+#~ msgid "Open YAAW"
+#~ msgstr "Abrir YAAW"
+
+#~ msgid "Overall download limit"
+#~ msgstr "Limite global para baixar"
+
+#~ msgid "Overall speed limit enabled"
+#~ msgstr "Limite da taxa de transferência global habilitado"
+
+#~ msgid "Overall upload limit"
+#~ msgstr "Limite global para subir"
+
+#~ msgid "Per task download limit"
+#~ msgstr "Limite por tarefa para baixar"
+
+#~ msgid "Per task speed limit enabled"
+#~ msgstr "Limite da taxa de transferência por tarefa habilitado"
+
+#~ msgid "Per task upload limit"
+#~ msgstr "Limite por tarefa para subir"
+
+#~ msgid "Prealloc"
+#~ msgstr "Pré-alocação"
+
+#~ msgid "Preallocation"
+#~ msgstr "Pré-alocação"
+
+#~ msgid "RPC Token"
+#~ msgstr ""
+#~ "Chave eletrônica do <abbr title=\"Remote Procedure Call/Chamada de "
+#~ "Procedimento Remoto\">RPC</abbr>"
+
+#~ msgid "Run daemon as user"
+#~ msgstr "Executar serviço como usuário"
+
+#~ msgid "Sec"
+#~ msgstr "Segurança"
+
+#~ msgid "Task Settings"
+#~ msgstr "Configurações das tarefas"
+
+#~ msgid "Trunc"
+#~ msgstr "Truncar"
+
+#~ msgid "User agent value"
+#~ msgstr "Valor da identificação do agente do usuário"
+
+#~ msgid "View Json-RPC URL"
+#~ msgstr "Visualizar URL do JSON-RPC"
+
+#~ msgid "in bytes, You can append K or M."
+#~ msgstr "em bytes. Você pode sufixar com K (quilo) ou M (mega)."
+
+#~ msgid "in bytes/sec, You can append K or M."
+#~ msgstr "em bytes por segundo. Você pode sufixar com K (quilo) ou M (mega)."
+
+#~ msgid "Log file is in the config file dir."
+#~ msgstr ""
+#~ "Arquivo de registro (log) está no diretório do arquivo de configuração."
