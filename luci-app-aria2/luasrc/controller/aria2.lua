@@ -21,7 +21,7 @@ function index()
 		cbi("aria2/config"), _("Configuration"), 1)
 
 	entry({"admin", "services", "aria2", "file"},
-		cbi("aria2/files"), _("Files"), 2)
+		form("aria2/files"), _("Files"), 2)
 
 	entry({"admin", "services", "aria2", "log"},
 		firstchild(), _("Log"), 3)

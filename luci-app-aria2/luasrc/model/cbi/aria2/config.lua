@@ -12,6 +12,7 @@ local function aria2_info()
 	end
 
 	local info = {}
+	local line
 	for line in util.execi("aria2c -v 2>/dev/null | grep -E '^(aria2 version|Enabled Features)'") do
 		if line:match("^aria2 version") then
 			local _, _, v = line:find("([%d%.]+)$")
@@ -56,6 +57,14 @@ s:tab("basic", translate("Basic Options"))
 
 o = s:taboption("basic", Flag, "enabled", translate("Enabled"))
 o.rmempty = false
+
+o = s:taboption("basic", ListValue, "user", translate("Run daemon as user"),
+	translate("Leave blank to use default user."))
+o:value("")
+local user
+for user in util.execi("cat /etc/passwd | cut -d':' -f1") do
+	o:value(user)
+end
 
 o = s:taboption("basic", Value, "dir", translate("Download directory"),
 	translate("The directory to store the downloaded file. eg. <code>/mnt/sda1</code>"))
@@ -148,7 +157,6 @@ o = s:taboption("rpc", Flag, "_use_ws", translate("Use WebSocket"))
 
 o = s:taboption("rpc", Value, "_rpc_url", translate("Json-RPC URL"))
 o.template = "aria2/value_with_btn"
-o.readonly = true
 o.onmouseover = "this.focus();this.select();"
 o.btntext = translate("Show URL")
 o.btnclick = "showRPCURL();"

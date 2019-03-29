@@ -10,14 +10,13 @@
 			attr("value", self:cfgvalue(section) or self.default) ..
 			ifattr(self.size, "size") ..
 			ifattr(self.placeholder, "placeholder") ..
-			ifattr(self.readonly, "readonly") ..
 			ifattr(self.maxlength, "maxlength") ..
 			ifattr(self.datatype, "data-type", self.datatype) ..
 			ifattr(self.onmouseover, "onmouseover")
 		%> />
 		<%- if self.btntext then -%>
-			<button class="cbi-button cbi-button-neutral" title="<%=self.btntext%>" aria-label="<%=self.btntext%>"<%=
+			<div class="cbi-button cbi-button-neutral" title="<%=self.btntext%>" aria-label="<%=self.btntext%>"<%=
 				ifattr(self.btnclick, "onclick", self.btnclick)
-			%>><%=self.btntext%></button>
+			%>><span style="font-weight: normal;"><%=self.btntext%></span></div>
 		<% end %>
 <%+cbi/valuefooter%>
