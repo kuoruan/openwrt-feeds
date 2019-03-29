@@ -62,11 +62,9 @@ function randomString(len) {
 
 function randomToken() {
 	var len = 32;
-	if (typeof window.prompt === 'function') {
-		var inputLength = prompt('<%:Please input token length:%>', len);
-		if (!isNaN(inputLength)) {
-			len = parseInt(inputLength);
-		}
+	var inputLength = prompt('<%:Please input token length:%>', len);
+	if (/^\d+$/.test(inputLength)) {
+		len = parseInt(inputLength);
 	}
 
 	var secretInput = document.getElementById('cbid.aria2.main.rpc_secret');
