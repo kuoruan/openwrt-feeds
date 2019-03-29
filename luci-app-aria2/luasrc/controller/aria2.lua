@@ -30,7 +30,7 @@ function index()
 		call("action_status"))
 
 	entry({"admin", "services", "aria2", "log", "view"},
-		template("aria2/log_view"))
+		template("aria2/log_template"))
 
 	entry({"admin", "services", "aria2", "log", "read"},
 		call("action_log_read"))

@@ -63,7 +63,7 @@ function randomString(len) {
 function randomToken() {
 	var len = 32;
 	if (typeof window.prompt === 'function') {
-		var inputLength = prompt('<%:Please input token length:%>', 20);
+		var inputLength = prompt('<%:Please input token length:%>', len);
 		if (!isNaN(inputLength)) {
 			len = parseInt(inputLength);
 		}
@@ -82,7 +82,7 @@ function showRPCURL() {
 	var secureElm = document.getElementById('cbid.aria2.main.rpc_secure');
 
 	var port = (portElm && !isNaN(portElm.value)) ? parseInt(portElm.value) : 6800;
-	var authMethod = (authMethodElm && authMethod.value) ? authMethod.value : "none";
+	var authMethod = (authMethodElm && authMethodElm.value) ? authMethodElm.value : "none";
 	var useWS = (useWSElm && useWSElm.checked) ? true : false;
 	var secure = (secureElm && secureElm.checked) ? true : false;
 

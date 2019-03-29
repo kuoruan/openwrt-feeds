@@ -12,7 +12,7 @@ local function aria2_info()
 	end
 
 	local info = {}
-	for line in util.execi("aria2c -v | grep -E '^(aria2 version|Enabled Features)'") do
+	for line in util.execi("aria2c -v 2>/dev/null | grep -E '^(aria2 version|Enabled Features)'") do
 		if line:match("^aria2 version") then
 			local _, _, v = line:find("([%d%.]+)$")
 			info.version = v
@@ -46,7 +46,7 @@ if not aria2 then
 	return m
 end
 
-m:append(Template("aria2/status_and_scripts"))
+m:append(Template("aria2/settings_header"))
 
 s = m:section(NamedSection, "main", "aria2")
 s.addremove = false
@@ -114,9 +114,10 @@ o = s:taboption("rpc", Value, "rpc_passwd", translate("RPC password"))
 o:depends("rpc_auth_method", "user_pass")
 o.password  =  true
 
-o = s:taboption("rpc", Value, "rpc_secret", translate("RPC token"), translate("Generate Randomly"))
+o = s:taboption("rpc", Value, "rpc_secret", translate("RPC token"))
 o:depends("rpc_auth_method", "token")
-o.template = "aria2/button_value"
+o.template = "aria2/value_with_btn"
+o.btntext = translate("Generate Randomly")
 o.btnclick = "randomToken();"
 
 if aria2.https then
@@ -125,7 +126,7 @@ if aria2.https then
 		.. " scheme to access the server. For WebSocket client, use wss scheme."))
 	o.enabled = "true"
 	o.disabled = "false"
-	o.default = "false"
+	o.rmempty = false
 
 	o = s:taboption("rpc", Value, "rpc_certificate", translate("RPC certificate"),
 		translate("Use the certificate in FILE for RPC server. The certificate must be either"
@@ -145,10 +146,11 @@ end
 
 o = s:taboption("rpc", Flag, "_use_ws", translate("Use WebSocket"))
 
-o = s:taboption("rpc", Value, "_rpc_url", translate("Json-RPC URL"), translate("Show URL"))
-o.template = "aria2/button_value"
+o = s:taboption("rpc", Value, "_rpc_url", translate("Json-RPC URL"))
+o.template = "aria2/value_with_btn"
 o.readonly = true
 o.onmouseover = "this.focus();this.select();"
+o.btntext = translate("Show URL")
 o.btnclick = "showRPCURL();"
 
 s:tab("http", translate("HTTP/FTP/SFTP Options"))
@@ -174,6 +176,7 @@ if aria2.https then
 	o.enabled = "true"
 	o.disabled = "false"
 	o.default = "true"
+	o.rmempty = false
 
 	o = s:taboption("http", Value, "ca_certificate", translate("CA certificate"),
 		translate("Use the certificate authorities in FILE to verify the peers. The certificate"
@@ -272,6 +275,7 @@ if aria2.bt then
 	o.enabled = "true"
 	o.disabled = "false"
 	o.default = "true"
+	o.rmempty = false
 
 	o = s:taboption("bt", Flag, "enable_dht6", translate("IPv6 <abbr title=\"Distributed Hash Table\">DHT</abbr> enabled"),
 		"%s %s" % {
@@ -280,7 +284,6 @@ if aria2.bt then
 		})
 	o.enabled = "true"
 	o.disabled = "false"
-	o.default = "false"
 
 	o = s:taboption("bt", Flag, "bt_enable_lpd", translate("<abbr title=\"Local Peer Discovery\">LPD</abbr> enabled"),
 		"%s %s" % {
@@ -299,6 +302,7 @@ if aria2.bt then
 	o.enabled = "true"
 	o.disabled = "false"
 	o.default = "true"
+	o.rmempty = false
 
 	o = s:taboption("bt", Flag, "bt_save_metadata", translate("Sava metadata"),
 		translate("Save meta data as \".torrent\" file. This option has effect only when BitTorrent"
